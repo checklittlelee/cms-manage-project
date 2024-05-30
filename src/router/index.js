@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter } from "vue-router"
+import { createWebHashHistory, createRouter } from "vue-router"
 
 import Layout from "@/layout/index.vue"
 
@@ -14,25 +14,18 @@ const constantRoutes = [
         meta: { title: "首页" }, // 路由元信息：用于存储与路由关联的自定义数据
         component: () => import("@/pages/home/index.vue"),
       },
-    ],
-  },
-  {
-    path: "/activity",
-    name: "activity",
-    component: Layout,
-    meta: { title: "活动管理" },
-    children: [
       {
-        path: "/",
+        path: "activity",
+        name: "activity",
+        meta: { title: "活动管理", breadcrumb: false },
         component: () => import("@/pages/activity/index.vue"),
-        hidden: true,
       },
     ],
   },
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHashHistory(),
   routes: constantRoutes,
 })
 

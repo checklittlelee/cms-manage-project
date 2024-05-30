@@ -2,10 +2,12 @@
   <div class="app-wrapper">
     <!-- 左侧菜单栏 -->
     <Sidebar class="sidebar-container" />
-    <!-- 顶部导航栏 -->
-    <Navbar />
-    <!-- 内容显示区域 -->
-    <AppMain />
+    <div class="main-container">
+      <!-- 顶部导航栏 -->
+      <Navbar />
+      <!-- 内容显示区域 -->
+      <AppMain />
+    </div>
   </div>
 </template>
 

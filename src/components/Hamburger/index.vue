@@ -15,6 +15,20 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const toggleClick = () => {
+  console.log("触发")
+}
+</script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.hamburger {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+.hamburger.is-active {
+  transform: rotate(180deg);
+}
+</style>
